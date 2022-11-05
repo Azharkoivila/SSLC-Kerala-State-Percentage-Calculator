@@ -20,7 +20,6 @@ This app SSLC Grade percentage calculator can be used to convert grade points to
 8. Finish.
 
 ## Installation
-Note:- Need JDK Version 10 above
 
 Install on linux
 
