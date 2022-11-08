@@ -43,7 +43,7 @@ class Main extends JFrame implements ItemListener,ActionListener{
 	static String[] choices = { "Choose","A+","A", "B+","B","C+","C","D+"};
 	static JComboBox<String> cbFristLanguage,cbSecondLanguage,cbEnglish,cbHindi;
 	static JComboBox<String>cbSocialScience, cbPhysics,cbChemistry,cbBiology,cbMathematics,cbIt;
-	
+	boolean choose=true;
 	public static void main(String args[]) throws IOException, URISyntaxException {
 		
 		jf=new JFrame("SSLC Percentage Calculator (Kerala)");
@@ -51,7 +51,6 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		jf.setSize(400,700);
 		jf.setLocation(600,200);
 		jf.setResizable(false);
-		//jf.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("/home/azharkoivila/Pictures/2.jpg")))));
 		jf.getContentPane().setBackground(new Color(27,37,47,255));
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -65,7 +64,6 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		aboutlabel=new JLabel("Designed & Developed by");
 		aboutlabel.setBounds(0,10,200,20);
 		aboutlabel.setBackground(Color.blue);
-		//aboutlabel.setOpaque(true);
 		aboutlabel.setForeground(Color.white);
 		aboutlabel.setFont(new Font("Arial",Font.ITALIC,17));
 		aboutlabel.setVisible(true);
@@ -106,9 +104,6 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		button.setVisible(true);
 		helpFrame.add(button);
 		
-		
-		//jp=new JPanel();
-		//jf.add(jp);
 		Main n=new Main();
 		
 		mb = new JMenuBar();
@@ -122,7 +117,7 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		jf.setJMenuBar(mb);
 		about.addActionListener(n);
 		
-		cbFristLanguage = new JComboBox<>(choices);
+		cbFristLanguage = new JComboBox<>(choices);		
 		cbFristLanguage.setBounds(295,25,90,30);
 		cbFristLanguage.setVisible(true);
 		jf.add(cbFristLanguage);
@@ -279,9 +274,7 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		display=new JLabel();
 		display.setBounds(10,530,380,50);
 		display.setFont(new Font("Arial",Font.PLAIN,20));
-		display.setBackground(Color.white);
 		display.setForeground(Color.green);
-		//display.setOpaque(true);
 		display.setVisible(true);
 		jf.add(display);
 		
@@ -290,7 +283,6 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		jb=new JButton("Calculate");
 		jb.setBounds(130,590,150,50);
 		jb.setFont(new Font("Arial",Font.PLAIN,20));
-		
 		jb.setBackground(new Color(7,95,254,255));
 		jb.setForeground(Color.white);
 		jb.setContentAreaFilled(true);
@@ -301,14 +293,13 @@ class Main extends JFrame implements ItemListener,ActionListener{
 		jf.add(jb);
 		
 		jf.setVisible(true);
-		
-		
 	}
 	
 
 	public void itemStateChanged(ItemEvent e) {
 		if(e.getSource()==cbFristLanguage) {
 			nonDisplay.setText((String) cbFristLanguage.getSelectedItem());
+			choose=false;
 			if (nonDisplay.getText()=="A+") {
 				aplus=9;
 				Sub1G=aplus;
@@ -340,12 +331,13 @@ class Main extends JFrame implements ItemListener,ActionListener{
 				Sub1G=dplus;
 			}
 		}
+		choose=true;
 		if(e.getSource()==cbSecondLanguage) {
 			nonDisplay.setText((String)cbSecondLanguage.getSelectedItem());
+			choose=false;
 			if(nonDisplay.getText()=="A+") {
 				aplus=9;
 				Sub2G=aplus;
-				
 			}
 			if(nonDisplay.getText()=="A") {
 				a=8;
@@ -372,8 +364,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 				Sub2G=dplus;
 			}
 		}
+		choose=true;
 		if(e.getSource()==cbEnglish) {
 			nonDisplay.setText((String)cbEnglish.getSelectedItem());
+			choose=false;
 			if (nonDisplay.getText()=="A+") {
 				aplus=9;
 				Sub3G=aplus;
@@ -404,8 +398,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 			}
 			
 		}
+		choose=true;
 		if(e.getSource()==cbHindi) {
 			nonDisplay.setText((String) cbHindi.getSelectedItem());
+			choose=false;
 			if(nonDisplay.getText()=="A+") {
 				aplus=9;
 				Sub4G=aplus;
@@ -435,8 +431,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 				Sub4G=dplus;
 			}
 		}
+		choose=true;
 			if(e.getSource()==cbSocialScience) {
-				nonDisplay.setText((String) cbSocialScience.getSelectedItem());;
+				nonDisplay.setText((String) cbSocialScience.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub5G=aplus;
@@ -466,8 +464,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					Sub5G=dplus;
 				}
 			}
+			choose=true;
 			if(e.getSource()==cbPhysics) {
 				nonDisplay.setText((String)cbPhysics.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub6G=aplus;
@@ -497,8 +497,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					Sub6G=dplus;
 				}
 			}
+			choose=true;
 			if(e.getSource()==cbChemistry) {
 				nonDisplay.setText((String)cbChemistry.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub7G=aplus;
@@ -528,8 +530,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					Sub7G=dplus;
 				}
 			}
+			choose=true;
 			if(e.getSource()==cbBiology) {
 				nonDisplay.setText((String)cbBiology.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub8G=aplus;
@@ -557,10 +561,11 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					dplus=3;
 					Sub8G=dplus;
 				}
-				
 			}
+			choose=true;
 			if(e.getSource()==cbMathematics) {
 				nonDisplay.setText((String)cbMathematics.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub9G=aplus;
@@ -590,8 +595,10 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					Sub9G=dplus;
 				}
 			}
+			choose=true;
 			if(e.getSource()==cbIt) {
 				nonDisplay.setText((String)cbIt.getSelectedItem());
+				choose=false;
 				if(nonDisplay.getText()=="A+") {
 					aplus=9;
 					Sub10G=aplus;
@@ -620,16 +627,19 @@ class Main extends JFrame implements ItemListener,ActionListener{
 					dplus=3;
 					Sub10G=dplus;
 				}
-			}
-			
+			}	
 		}
 		
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==jb) {
+			if(choose==true) {
+				display.setText("Choose all Subject Grade!!!");
+			}else {
 			totel=Sub1G+Sub2G+Sub3G+Sub4G+Sub5G+Sub6G+Sub7G+Sub8G+Sub9G+Sub10G;
 			percentage=(float) (totel*1.11);
 			display.setText("Congratulation YOU HAVE "+percentage+" %");
+			}
 		}
 		if(e.getSource()==about) {
 			helpFrame.setVisible(true);
