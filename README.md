@@ -4,15 +4,10 @@
 This app SSLC Grade percentage calculator can be used to convert grade points to Percentage
 
 
-## License
-
-
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-
 ## Screenshots
 
-![App Screenshot](https://github.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/blob/main/ScreenShots/ScreenShot.png?raw=true) 
-![App Screenshot](https://github.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/blob/main/ScreenShots/sc.png?raw=true)
+![App Screenshot](https://raw.githubusercontent.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/production/ScreenShot/ScreenShot.png) 
+![App Screenshot](https://raw.githubusercontent.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/production/ScreenShot/sc.png)
 ## Usage
 
 1. Launch Eclipse Java.
@@ -25,7 +20,6 @@ This app SSLC Grade percentage calculator can be used to convert grade points to
 8. Finish.
 
 ## Installation
-Note:- Need JDK Version 10 above
 
 Install on linux
 
@@ -38,12 +32,7 @@ Install on Windows
 [refer This link](https://www.wikihow.com/Run-a-.Jar-Java-File)
 
 ## Download Package
-[Linux](https://github.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/raw/main/Packages/Linux/PercentageCalculator.jar)
-
-[Windows](https://github.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/raw/main/Packages/Windows/PercentageCalculator.exe)
-
-
-    
+[Download Now](https://github.com/Azharkoivila/SSLC-Kerala-State-Percentage-Calculator/raw/production/Packeges/Linux/PercentageCalculator.jar)
 
 ## Authors
 
